@@ -1,0 +1,20 @@
+.container{
+    background-color: blue;
+    display: flex;
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.types-search{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}

@@ -1,0 +1,37 @@
+ul {
+  position: relative;
+  background: #fff;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  list-style: none;
+  line-height: 50px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pageNumber {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #383838;
+  font-weight: 400;
+  border-radius: 50%;
+}
+
+
+ul li.pageNumber:hover a,
+ul li.pageNumber.active a {
+  background: #383838;
+  color: #fff;
+}
