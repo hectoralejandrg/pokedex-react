@@ -29,15 +29,25 @@ const Pagination = ({ urls, handlePage }) => {
 
   const listPag = url.map((element, index) => {
     return (
-      <li className="pageNumber" key={index}>
-        <a href="#" onClick={()=>handlePage(element)}>{index + 1}</a>
-      </li>
+      <button
+        key={index}
+        onClick={() => handlePage(element)}
+        type="button"
+        class="btn btn-primary"
+      >
+        {index + 1}
+      </button>
     );
   });
 
   return (
-    <div>
-      <ul>{listPag}</ul>
+    <div
+      className="btn-toolbar mt-3"
+      role="toolbar"
+    >
+      <div className="btn-group me-2" role="group">
+        {listPag}
+      </div>
     </div>
   );
 };

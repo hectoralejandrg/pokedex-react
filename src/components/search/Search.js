@@ -6,9 +6,9 @@ import "./Search.css"
 const Search = ({handleSearch}) => {
   const [pokemonSerch, setPokemonSerch] = useState("")
   return (
-    <div className="search">
-      <input className="input-search" type="search" placeholder="Search pokemon" onChange={(e)=> setPokemonSerch(e.target.value.toLowerCase())}/>
-      <button className="btn" onClick={()=>handleSearch(pokemonSerch)}><FontAwesomeIcon size="2x" icon={faSearchengin} /></button>
+    <div className="d-flex">
+      <input className="form-control" type="search" placeholder="Search pokemon" onChange={(e)=> setPokemonSerch(e.target.value.toLowerCase())}/>
+      <button className="btn btn-primary" onClick={()=>handleSearch(pokemonSerch)}><FontAwesomeIcon size="2x" icon={faSearchengin} /></button>
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Select = ({ handleSelect }) => {
   return (
     <div>
       <select
-        className="select"
+        className="form-select form-select-lg"
         onChange={(e) => handleSelect(e.target.value)}
       >
         {listValues}

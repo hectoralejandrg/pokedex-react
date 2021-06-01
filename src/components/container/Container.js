@@ -10,7 +10,7 @@ const Container = () => {
   const [urls, setUrls] = useState([]);
   const [pag, setPag] = useState([]);
   const [typeUrl, setTypeUrl] = useState("https://pokeapi.co/api/v2/type/1");
-  const [viewPagination, setViewPagination] = useState(true)
+  const [viewPagination, setViewPagination] = useState(true);
 
   /**Peticion de los tipos de pokemon */
   useEffect(() => {
@@ -34,25 +34,33 @@ const Container = () => {
 
   /**Manejador del Select */
   const handleSelect = (url) => {
-    setViewPagination(true)
+    setViewPagination(true);
     setTypeUrl(url);
   };
 
   /**Manejador de la barra de busqueda */
-  const handleSearch = (pokemonSerch)=>{
-    console.log(pokemonSerch)
+  const handleSearch = (pokemonSerch) => {
+    console.log(pokemonSerch);
     setViewPagination(false);
-    setPag([{pokemon: {url:`https://pokeapi.co/api/v2/pokemon/${pokemonSerch}`}}])
-  }
+    setPag([
+      { pokemon: { url: `https://pokeapi.co/api/v2/pokemon/${pokemonSerch}` } },
+    ]);
+  };
 
   return (
     <div className="container">
-      <div className="types-search">
-        <Search handleSearch={handleSearch}/>
-        <Select handleSelect={handleSelect} />
+      <div className="row justify-content-between m-3">
+        <div className="col-3">
+          <Search handleSearch={handleSearch} />
+        </div>
+        <div className="col-3">
+          <Select handleSelect={handleSelect} />
+        </div>
       </div>
-      <div className="grid">{list}</div>
-      {viewPagination? <Pagination urls={urls} handlePage={handle} />: null}
+      <div className="row">{list}</div>
+      <div className="row">
+        {viewPagination ? <Pagination urls={urls} handlePage={handle} /> : null}
+      </div>
     </div>
   );
 };

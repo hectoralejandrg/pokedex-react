@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getPokemon } from "../../services/Pokeapi";
+import Bar from "./Bar";
 import "./Card.css";
 
 const Card = ({ url }) => {
@@ -15,12 +16,12 @@ const Card = ({ url }) => {
     if (url) {
       getPokemon(url).then((res) => {
         setName(res.data.name);
-        setSprite(res.data.sprites.front_default);
+        setSprite(res.data.sprites.other.dream_world.front_default);
         setTypes(res.data.types);
-        setHp(res.data.stats[0].base_stat)
-        setAttack(res.data.stats[1].base_stat)
-        setDefense(res.data.stats[2].base_stat)
-        setSpeed(res.data.stats[5].base_stat)
+        setHp(res.data.stats[0].base_stat);
+        setAttack(res.data.stats[1].base_stat);
+        setDefense(res.data.stats[2].base_stat);
+        setSpeed(res.data.stats[5].base_stat);
       });
     }
   }, [url]);
@@ -29,32 +30,17 @@ const Card = ({ url }) => {
     return <span key={index}>{element.type.name}</span>;
   });
   return (
-    <div className="card photo">
-      <div className="card-header">
+    <div className="card col-3">
+      <div className="card-body text-center">
         <h4>{name.toUpperCase()}</h4>
-        <hr />
-      </div>
-      <div className="card-body">
-        <img src={sprite} alt="" />
+        <img src={sprite} alt={name} className="img-fluid rounded"/>
         <div>{listTypes}</div>
 
         <div>
-          <div>
-            <span>HP: </span>
-            <span>{hp}</span>
-          </div>
-          <div>
-            <span>Att: </span>
-            <span>{attack}</span>
-          </div>
-          <div>
-            <span>Def: </span>
-            <span>{defense}</span>
-          </div>
-          <div>
-            <span>Spe: </span>
-            <span>{speed}</span>
-          </div>
+          <Bar name="HP" value={hp}/>
+          <Bar name="Att" value={attack}/>
+          <Bar name="Def" value={defense}/>
+          <Bar name="Spe" value={speed}/>
         </div>
       </div>
     </div>
