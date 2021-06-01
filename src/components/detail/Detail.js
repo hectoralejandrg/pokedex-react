@@ -26,20 +26,23 @@ const Detail = () => {
     });
   }, []);
 
-  const listTypes = type.map((element) => {
+  const listTypes = type.map((element, index) => {
     return (
-      <span class="badge rounded-pill bg-danger me-2">{element.type.name}</span>
+      <span key={index} class="badge rounded-pill bg-danger me-2">
+        {element.type.name}
+      </span>
     );
   });
-  const listAbilities = abilities.map((element) => {
+  const listAbilities = abilities.map((element, index) => {
     return (
-      <span class="badge bg-warning text-dark m-2">{element.ability.name}</span>
+      <span key={index} class="badge bg-warning text-dark m-2">
+        {element.ability.name}
+      </span>
     );
   });
   return (
     <div className="card w-75 p-3">
       <div className="row">
-
         <div className="col">
           <div className="row">
             <div className="col-3">

@@ -27,20 +27,28 @@ const Card = ({ url }) => {
   }, [url]);
 
   const listTypes = types.map((element, index) => {
-    return <span key={index}>{element.type.name}</span>;
+    return (
+      <span key={index} class="badge rounded-pill bg-danger me-2">
+        {element.type.name}
+      </span>
+    );
   });
   return (
-    <div className="card col">
+    <div className="card col margin-card hover">
       <div className="card-body text-center">
         <h4>{name.toUpperCase()}</h4>
-        <img src={sprite} alt={name} className="img-fluid rounded"/>
+        <img
+          src={sprite}
+          alt={name}
+          className="img-card rounded mx-auto d-block"
+        />
         <div>{listTypes}</div>
 
         <div>
-          <Bar name="HP" value={hp}/>
-          <Bar name="Att" value={attack}/>
-          <Bar name="Def" value={defense}/>
-          <Bar name="Spe" value={speed}/>
+          <Bar name="HP" value={hp} />
+          <Bar name="Att" value={attack} />
+          <Bar name="Def" value={defense} />
+          <Bar name="Spe" value={speed} />
         </div>
       </div>
     </div>
