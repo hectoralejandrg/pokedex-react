@@ -30,7 +30,7 @@ const Card = ({ url }) => {
     return <span key={index}>{element.type.name}</span>;
   });
   return (
-    <div className="card col-3">
+    <div className="card col">
       <div className="card-body text-center">
         <h4>{name.toUpperCase()}</h4>
         <img src={sprite} alt={name} className="img-fluid rounded"/>
