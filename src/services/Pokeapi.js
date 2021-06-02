@@ -6,3 +6,5 @@ export const getTypes = (url) => axios.get(url);
 export const getPokemon = (url) => axios.get(url);
 
 export const getAllTypes = ()=> axios.get(`${baseUrl}`)
+
+export const getEcounters = (url)=> axios.get(url);

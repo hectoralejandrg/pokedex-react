@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getAllTypes } from "../../services/Pokeapi";
-import "./Select.css";
 
 const Select = ({ handleSelect }) => {
   const [values, setValues] = useState([]);

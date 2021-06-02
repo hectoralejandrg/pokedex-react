@@ -4,7 +4,7 @@ const Bar = ({name, value}) => {
     return (
         <div className="row align-items-center">
             <div className="col-2">
-              <span class="badge bg-info text-dark">{name}</span>
+              <span className="badge bg-info text-dark">{name}</span>
             </div>
             <div className="col-8">
               <div
@@ -21,7 +21,7 @@ const Bar = ({name, value}) => {
               </div>
             </div>
             <div className="col-2">
-              <span class="badge rounded-pill bg-danger">{value}</span>
+              <span className="badge rounded-pill bg-danger">{value}</span>
             </div>
           </div>
     )

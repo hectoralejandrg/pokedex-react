@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Pagination.css";
 
 const Pagination = ({ urls, handlePage }) => {
   const [url, setUrl] = useState([]);
@@ -33,7 +32,7 @@ const Pagination = ({ urls, handlePage }) => {
         key={index}
         onClick={() => handlePage(element)}
         type="button"
-        class="btn btn-primary"
+        className="btn btn-primary"
       >
         {index + 1}
       </button>

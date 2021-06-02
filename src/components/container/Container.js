@@ -4,7 +4,6 @@ import Card from "../cards/Card";
 import Pagination from "../pagination/Pagination";
 import Search from "../search/Search";
 import Select from "../select/Select";
-import "./Container.css";
 
 const Container = () => {
   const [urls, setUrls] = useState([]);
@@ -40,7 +39,6 @@ const Container = () => {
 
   /**Manejador de la barra de busqueda */
   const handleSearch = (pokemonSerch) => {
-    console.log(pokemonSerch);
     setViewPagination(false);
     setPag([
       { pokemon: { url: `https://pokeapi.co/api/v2/pokemon/${pokemonSerch}` } },
