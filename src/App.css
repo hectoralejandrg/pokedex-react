@@ -11,12 +11,8 @@
   align-items: center;
   flex-direction: row;
 }
-body{
-  background: #323c41;
-}
 .root {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
 }
