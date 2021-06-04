@@ -56,7 +56,7 @@ const Container = () => {
         </div>
       </div>
       <div className="row">{list}</div>
-      <div className="row">
+      <div className="d-flex justify-content-center">
         {viewPagination ? <Pagination urls={urls} handlePage={handle} /> : null}
       </div>
     </div>

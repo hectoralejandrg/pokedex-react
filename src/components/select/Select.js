@@ -5,6 +5,7 @@ const Select = ({ handleSelect }) => {
   const [values, setValues] = useState([]);
   useEffect(() => {
     getAllTypes().then((res) => {
+      console.log(res.data.results);
       setValues(res.data.results);
     });
   }, []);
