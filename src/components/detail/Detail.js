@@ -22,7 +22,9 @@ const Detail = () => {
         setOrder(res.data.order);
         setWeight(res.data.weight);
         setName(res.data.name);
-        setSprite(res.data.sprites.other.dream_world.front_default);
+        setSprite(res.data.sprites.other.dream_world.front_default ||
+          res.data.sprites.other["official-artwork"].front_default ||
+          res.data.sprites.front_default);
         setType(res.data.types);
         setAbilities(res.data.abilities);
       });

@@ -21,7 +21,11 @@ const Card = ({ url }) => {
       getPokemon(url).then((res) => {
         setId(res.data.id);
         setName(res.data.name);
-        setSprite(res.data.sprites.other.dream_world.front_default);
+        setSprite(
+          res.data.sprites.other.dream_world.front_default ||
+            res.data.sprites.other["official-artwork"].front_default ||
+            res.data.sprites.front_default
+        );
         setTypes(res.data.types);
         setHp(res.data.stats[0].base_stat);
         setAttack(res.data.stats[1].base_stat);

@@ -15,7 +15,7 @@ const Encounters = ({ id }) => {
 
   const listEncounters = encounters.map((element, index) => {
     return (
-      <h5 className="me-3" key={index}>
+      <div className="me-3" key={index}>
         <span className="badge bg-secondary me-1">
           City: {element.location_area.name.split("-")[0]}
         </span>
@@ -26,7 +26,7 @@ const Encounters = ({ id }) => {
             .slice(1, element.location_area.name.split("-").length - 1)
             .join(" ")}
         </span>
-      </h5>
+      </div>
     );
   });
 

@@ -42,7 +42,6 @@ const Pagination = ({ urls, handlePage }) => {
   });
 
   const handleNext = () => {
-    console.log("next")
     if(end < url.length){
       setStart(start+1)
       setEnd(end+1)
@@ -51,7 +50,6 @@ const Pagination = ({ urls, handlePage }) => {
   };
 
   const handlePrevius = () => {
-    console.log("next")
     if(start > 0){
       setStart(start-1)
       setEnd(end-1)
