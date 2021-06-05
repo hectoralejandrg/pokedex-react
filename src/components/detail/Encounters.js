@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 import { getEcounters } from "../../services/Pokeapi";
 
-const Encounters = ({ id }) => {
+const Encounters = () => {
+  let { id } = useParams();
   const [encounters, setEncounters] = useState([]);
   useEffect(() => {
     if (id) {
@@ -30,10 +32,6 @@ const Encounters = ({ id }) => {
     );
   });
 
-  return (
-    <div className="d-flex flex-wrap p-3">
-      {listEncounters}
-    </div>
-  );
+  return <div className="d-flex flex-wrap p-3">{listEncounters}</div>;
 };
 export default Encounters;
