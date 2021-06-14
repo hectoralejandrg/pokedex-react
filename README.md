@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Netlify Link
 
-### `https://vigilant-cray-9e498d.netlify.app/#/pokedex`
+[https://vigilant-cray-9e498d.netlify.app/#/pokedex](https://vigilant-cray-9e498d.netlify.app/#/pokedex)
 
 ## Available Scripts
 
