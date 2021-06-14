@@ -10,13 +10,15 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import Logo from "./components/navbar/Logo";
+
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-
+        <Logo />
         <Switch>
           <Route path="/pokedex/pokemon/encounters" children={<Encounters />} />
 
